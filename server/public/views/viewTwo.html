@@ -1,0 +1,52 @@
+<div class="viewTwoDiv">
+
+    <div class ='getUsersButton2'>
+        <button class="btn btn-success" ng-click="getUsers()">Select a User</button>
+    </div>
+
+    <ul>
+        <li class="ordersDiv" ng-repeat="person in people track by $index">Name: {{person.name}}<br>
+            <button class="btn btn-success"  ng-click="getOrders()">Display Orders</button>
+        </li><br>
+    </ul>
+
+    <form>
+        Start Date:<input type="text" name="firstname" value="">
+        End Date:<input type="text" name="lastname" value="">
+        <input type="submit" class="btn btn-success" value="Submit">
+    </form>
+
+
+    <table>
+        <tr>
+            <td>User</td>
+            <td>Order Name</td>
+            <td>Shipping Address</td>
+            <td>City</td>
+            <td>State</td>
+            <td>ZIP</td>
+            <td>Order Date</td>
+        </tr>
+        <tr>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+        </tr>
+        <tr>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+            <td>Values</td>
+        </tr>
+    </table>
+
+
+</div>
+

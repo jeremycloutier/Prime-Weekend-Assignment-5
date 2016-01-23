@@ -1,0 +1,67 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin: 24px;
+}
+.btn-info {
+    margin: 14px;
+    width: 200px;
+}
+
+.col-md-4 {
+    text-align: center;
+    width: 50%;
+}
+
+
+.viewTwoDiv{
+    float: right;
+    margin-right: 40px;
+}
+
+
+.getUsersButton{
+    margin: 0px 0px 40px 40px;
+}
+
+.getUsersButton2 {
+    margin: 0px 0px 40px 0px;
+    text-align: right;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+
+.address{
+    float: left;
+    margin-right: 1em;
+}
+
+.addressNames{
+    float: left;
+    margin-right: 14px;
+}
+
+.ordersDiv{
+    text-align: right;
+}
+
+form, input {
+    text-align: right;
+    margin-bottom: 24px;
+}
+
+table {
+    margin-left: auto;
+}
+
+table, tr, td {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.clearfix {
+    overflow: auto;
+}

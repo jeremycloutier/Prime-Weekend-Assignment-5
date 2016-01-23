@@ -1,0 +1,28 @@
+<div class="viewOneDiv">
+
+    <!--<select ng-option="person as person.name for person in people track by person.id">-->
+    <!--</select>-->
+
+    <div class ='getUsersButton'>
+        <button class='btn btn-success' ng-click="getUsers()">Select a User</button>
+    </div>
+
+    <ul class="clearfix">
+        <li class="addressNames" ng-repeat="person in people track by $index">Name: {{person.name}}<br>
+            <button class="btn btn-success"  ng-click="getAddresses()">Display Addresses</button>
+        </li>
+    </ul>
+
+    <ul class="addressContent">
+        <li ng-repeat="address in addresses track by $index">
+            <p class="address">Address: </p>
+            <div>
+                {{address.address_street}}<br>
+                {{address.address_city}}, {{address.address_state}}, {{address.address_zip}}
+            </div>
+            <!--Return only addresses for user_id-->
+        </li>
+    </ul>
+
+</div>
+
