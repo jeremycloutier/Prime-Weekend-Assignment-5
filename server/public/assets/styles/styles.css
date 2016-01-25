@@ -34,18 +34,31 @@ li {
     margin-bottom: 1em;
 }
 
-.address{
+.addressLabel{
     float: left;
     margin-right: 1em;
+    padding-left: 10px;
 }
 
 .addressNames{
     float: left;
     margin-right: 14px;
 }
+.addressBlock{
+    border: 2px solid gray;
+    border-radius: 4px;
+    background-color: lightblue;
+    width: 260px;
+}
 
 .ordersDiv{
-    text-align: right;
+    float: right;
+    margin-left: 14px;
+}
+
+.well {
+    width: 400px;
+    border-radius: 4px;
 }
 
 form, input {
@@ -59,6 +72,7 @@ table {
 
 table, tr, td {
     border: 2px solid black;
+    border-radius: 4px;
     padding: 20px;
 }
 

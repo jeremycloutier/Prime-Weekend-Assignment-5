@@ -4,15 +4,15 @@
         <button class="btn btn-success" ng-click="getUsers()">Select a User</button>
     </div>
 
-    <ul>
+    <ul class="clearfix">
         <li class="ordersDiv" ng-repeat="person in people track by $index">Name: {{person.name}}<br>
             <button class="btn btn-success"  ng-click="getOrders()">Display Orders</button>
         </li><br>
     </ul>
 
     <form>
-        Start Date:<input type="text" name="firstname" value="">
-        End Date:<input type="text" name="lastname" value="">
+        Start Date: <input type="date" name="" value="">
+        End Date: <input type="date" name="" value="">
         <input type="submit" class="btn btn-success" value="Submit">
     </form>
 

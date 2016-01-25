@@ -31,17 +31,14 @@ router.get('/getUsers', function(req, res) {
     });
 });
 
-router.get('/getAddresses', function(req, res){
+router.get('/getAddresses/:id', function(req, res){
     var addressResults = [];
-
-
-
+    var id = req.params.id;
     // Get a Postgres client from the connection pool
     pg.connect(connectionString, function(err, client, done) {
 
         // SQL Query > Select Data
-        var query = client.query("SELECT * FROM users JOIN addresses ON users.id = addresses.user_id;");
-
+        var query = client.query("SELECT users.name, addresses.* FROM users JOIN addresses ON users.id = addresses.user_id WHERE users.id = $1", [id]);
         // Stream results back one row at a time
         query.on('row', function(row) {
             addressResults.push(row);
@@ -58,6 +55,16 @@ router.get('/getAddresses', function(req, res){
         }
     });
 });
+
+//Begin "get orders.
+//router.get('/getOrders'){
+//    var ordersResults = [];
+//
+//    var query = client.query("SELECT * FROM orders JOIN addresses on addresses.address_id = orders.ship_address_id JOIN users " +
+//    "ON users.id = orders.user_id where orders.user_id = " + id + "AND order_date >= " + startDate + " AND order_date <= '" + endDate + "'");
+//
+//}
+
 
 router.get('/', function(request, response){
     var pathJoined = path.join(__dirname, '../public/views/index.html');

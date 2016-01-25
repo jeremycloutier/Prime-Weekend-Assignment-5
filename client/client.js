@@ -15,29 +15,29 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 
 app.controller('firstController', ['$scope', '$http', function($scope, $http){
-    $scope.getUsers = function(request, response){
+    $scope.getUsers = function(){
         $http.get('/getUsers').then(function(response, err) {
             //data.response = response.data;
             $scope.people = response.data;
-            console.log($scope.people);
+            //console.log($scope.people);
         });
     };
 
-    $scope.getAddresses = function(request, response){
-        $http.get('/getAddresses').then(function(response,err) {
+    $scope.getAddresses = function(id) {
+        console.log(id);
+        $http.get('/getAddresses/' + id).then(function(response,err) {
             $scope.addresses = response.data;
-            console.log($scope.addresses);
-        })
+            //console.log($scope.addresses);
+        });
     };
 }]);
 
 
 app.controller('secondController', ['$scope', '$http', function($scope, $http){
-    $scope.getUsers = function(request, response){
+    $scope.getUsers = function(){
         $http.get('/getUsers').then(function(response, err) {
             //data.response = response.data;
             $scope.people = response.data;
-            console.log($scope.people);
         });
     };
 }]);

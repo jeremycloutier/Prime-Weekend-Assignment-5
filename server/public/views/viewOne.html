@@ -1,22 +1,19 @@
 <div class="viewOneDiv">
 
-    <!--<select ng-option="person as person.name for person in people track by person.id">-->
-    <!--</select>-->
-
     <div class ='getUsersButton'>
         <button class='btn btn-success' ng-click="getUsers()">Select a User</button>
     </div>
 
     <ul class="clearfix">
         <li class="addressNames" ng-repeat="person in people track by $index">Name: {{person.name}}<br>
-            <button class="btn btn-success"  ng-click="getAddresses()">Display Addresses</button>
+            <button class="btn btn-success" ng-click="getAddresses(person.id)">Display Addresses</button>
         </li>
     </ul>
 
     <ul class="addressContent">
         <li ng-repeat="address in addresses track by $index">
-            <p class="address">Address: </p>
-            <div>
+            <p class="addressLabel">Address: </p>
+            <div class="addressBlock">
                 {{address.address_street}}<br>
                 {{address.address_city}}, {{address.address_state}}, {{address.address_zip}}
             </div>
@@ -25,4 +22,3 @@
     </ul>
 
 </div>
-
